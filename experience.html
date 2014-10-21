@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joseph.mx</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">    
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- My site -->
+    <link href="assets/css/mystyle.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Chart.js -->
+    <script src="assets/js/Chart.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+  <div class="container">
+    <div class="nav">
+      <div class="row">
+        <div class="col-md-24">
+          <h1>Joseph Collins <br /><small>Front End Web Developer</small></h1>
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="joecollins-cv-josephmx-211014.pdf">CV</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="https://github.com/joecollins">Github</a></li>
+          <li><a href="https://github.com/joecollins/joseph.mx"><span class="fa fa-github"></span> Download This Site</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-5 sidebar">
+          <h3>Areas of Experience</h3>
+
+          <ul>
+            <li><strong>Web Development</strong></li>
+            <li>60% of experience</li>
+            <li><strong>SEO</strong></li>
+            <li>20% of experience</li>
+            <li><strong>eCommerce</strong></li>
+            <li>20% of experience</li>
+          </ul>
+
+          <canvas id="myChart" width="200px"></canvas>
+          <script>
+          var data = [
+              {
+                  value: 60,
+                  color:"#cc9966",
+                  highlight: "#DFBF9F",
+                  label: "Web Development"
+              },
+              {
+                  value: 20,
+                  color: "#999999",
+                  highlight: "#C1C1C1",
+                  label: "SEO"
+              },
+              {
+                  value: 20,
+                  color: "#BFBFBF",
+                  highlight: "#DFDFDF",
+                  label: "eCommerce"
+              }
+          ]
+
+            var ctx = document.getElementById("myChart").getContext("2d");
+            var experiencePieChart = new Chart(ctx).Pie(data);
+          </script>
+
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-18 maincontent">
+          <div class="row">
+            <div class="col-md-24 profiletext">
+              <h3><strong>About me</strong></h3>
+              <strong>Web Development and Programming</strong>
+              <p>Much of my time at Satmap, has been spent developing the website (extensive HTML and CSS changes, and some JS where neccesary) and writing new features, such as (unreleased) "Map Picker" tool and "Offer Wizard". I've also created websites from PSDs to practice my skills and learn new ones.</p>
+
+              <strong>SEO</strong>
+              <p>At Satmap I've managed SEO on my own, which included article research and creation, using both a knowledge base and a WordPress blog to publish the articles. I rewrote existing copy to better suit its purpose and managed Webmaster tools (including fixing HTML and link issues on the site)</p>
+
+              <strong>eCommerce Management</strong>
+              <p>Satmap uses Magento for eCommerce and website management. I've created CMS pages and blocks, and made changes to the core theme and the theme of plugins. I've also helped with general admin such as adding/editing products, creating discounts and sales, etc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script>
+    </script>
+  </body>
+</html>
