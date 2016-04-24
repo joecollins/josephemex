@@ -1,0 +1,11 @@
+# Site settings
+title: Joseph.mx - The Blog
+email: me@joseph.mx
+description: > # this means to ignore newlines until "baseurl:"
+  The blog for Joseph (Joe) Collins, resident of Joseph.mx
+baseurl: "/blog" # the subpath of your site, e.g. /blog/
+url: "http://joseph.mx" # the base hostname & protocol for your site
+github_username:  joecollins
+
+# Build settings
+markdown: kramdown

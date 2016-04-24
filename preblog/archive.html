@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-24 maincontent">
+        <div class="row">
+          {% for post in site.posts %}          
+            <div class="col-md-12 archivepreview">
+              <a href="{{ post.url | prepend: site.baseurl }}"><h3><strong>{{ post.title }}</strong></h3></a>
+              <p>{{ post.excerpt | truncate: 250}}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

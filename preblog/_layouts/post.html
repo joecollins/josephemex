@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper" id="blogpost">
+        {{ content }}
+      </div>
+    
+    
+    <hr>
+
+    <section class="maincontent">
+        {% for post in site.posts limit:6 %}
+        <div class="recentposts col-md-4">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+      {% endfor %}
+    </section>
+  
+    </div>
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,4 +1,4 @@
-$color: #999999;
+$color: #555;
 $boldcolor: #000000;
 $brown: #cc9966;
 $background: #F7F7F7;
@@ -14,6 +14,11 @@ body {
 
 	a {
 		text-decoration: none;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
 	}
 }
 
@@ -54,7 +59,7 @@ body {
 			font-family: 'Lato', sans-serif;
 			color: $color;
 			font-size: 0.4em;
-			font-weight: 300;
+			font-weight: 400;
 			
 		}
 	}
@@ -84,12 +89,9 @@ body {
 
 		.skills {
 			min-height: 20.7em;
-		}
-	}
-
-	@media screen and (max-width: 1200px){
-		.profilephotooverlay, .toggle {
-			display: none;
+		}		
+		.backlog {
+			height: 20em;
 		}
 	}
 
@@ -105,7 +107,9 @@ body {
 	}
 
 	@media screen and (max-width: 1000px) {
-
+		.backlog {
+			height: 15em;
+		}
 	}
 
 	.sidebar {
@@ -126,6 +130,18 @@ body {
 			}
 		}
 	}
+
+	.backlog {
+		ul {
+			li:nth-of-type(odd){
+				color: $color !important;
+			}
+			li:nth-of-type(even){
+				color: $brown !important;
+			}
+		}
+	}
+
 
 	.maincontent {
 		border: 3px solid rgba(#F1F1F1, 0.8);
@@ -174,7 +190,7 @@ body {
 				}				
 				li:nth-child(even) {
 					font-family: Lato, sans-serif;
-					font-weight: 300; 
+					font-weight: 400; 
 				}
 			}
 		}
@@ -188,7 +204,7 @@ body {
 				padding-right: 0.5em;
 				text-align: left;
 				font-family: Lato, sans-serif;
-				font-weight: 300; 
+				font-weight: 400; 
 			}
 
 			.thumbtitle {
@@ -219,7 +235,12 @@ body {
 
 			p {
 				font-family: Lato, sans-serif;
-				font-weight: 300; 
+				font-weight: 400; 
+			}
+
+			a {
+				text-decoration: none;
+				
 			}
 		}
 	}
@@ -233,5 +254,80 @@ body {
 		text-align: center;
 		color: $color;
 		padding-top: 1em;
+	}
+}
+
+.recentposts {
+	padding-left: 0px;
+	padding-bottom: 2em;
+	a {
+		color: $color;
+		font-size: 20px;
+	}
+}
+
+.archivepreview {
+	text-align: left;
+	height: 14em;
+	border-right: 1px solid #F1F1F1;
+}  
+.archivepreview:nth-of-type(odd) {
+	background-right: 1px solid rgba(#F1F1F1, 0.8);
+}  
+.archivelink {
+	position: absolute;
+	display: block;
+	font-size: 120%;
+	text-align: center;
+	bottom: 0px;
+	left: 22%;
+}
+.content .backlog ul li {
+	padding-bottom: 0.5em;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+	.backlog {
+		height: 20em;
+	}
+
+	.archivelink {
+		left: 22%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.archivelink {
+		left: 17%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.backlog {
+		height: 15em;
+	}
+	.archivelink {
+		left: 40%;
+	}
+}
+
+#blogpost {
+	h1 {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 18px;
+	}
+}
+
+.previews {
+	h1 {
+		display: none;
+	}
+
+	h3 {
+		margin-top: 50px;
 	}
 }

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-5 sidebar backlog hidden-sm">
+        <h3>Backlog</h3>
+        <ul>
+          {% for post in site.posts limit:4 %}
+          <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <a href="archive.html"  class="archivelink">The Full Archive</a>
+      </div>
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-18 maincontent previews">
+        <div class="row">
+          <div class="col-md-24 profiletext">
+            {% for post in site.posts limit: 3 %}
+            <a href="{{ post.url | prepend: site.baseurl }}"><h3><strong>{{ post.title }}</strong></h3></a>
+            <p>{{ post.excerpt | truncate: 250 }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
